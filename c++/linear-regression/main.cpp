@@ -9,6 +9,9 @@ This is a simple linear regression fit program which does the following :
 */
 
 // Necessary libraries
+
+#include "ETL/ETL.h"
+
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
@@ -21,6 +24,15 @@ using namespace std;
 
 
 int main(int argc, char* argv[]) {
+
+	//ETL etl(argv[1], argv[2], argv[3]);
+
+	ETL etl("Anscombes-quartet-data.csv", ",", true); // Creating an instance of ETL and initializing it
+
+	std::vector<std::vector<std::string>> data = etl.readCSV();
+
+	return EXIT_SUCCESS;
+
 }
 
 

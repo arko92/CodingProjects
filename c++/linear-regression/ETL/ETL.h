@@ -23,7 +23,7 @@ public:
 		Header = header;
 	}
 
-	std::vector<std::vector<std::string>> readCSV(); // Reads a CSV dataset and stores it into a 2D vector
+	std::vector<std::vector<std::string>> readCSV(); // Reads a CSV file and stores the data into a 2D vector
 
 };
 
