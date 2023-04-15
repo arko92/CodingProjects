@@ -19,6 +19,7 @@ This is a simple linear regression fit program which does the following :
 #include <string>
 #include <vector>
 #include <algorithm>
+#include<Eigen/Dense>
 
 using namespace std;
 
@@ -30,6 +31,14 @@ int main(int argc, char* argv[]) {
 	ETL etl("Anscombes-quartet-data.csv", ",", true); // Creating an instance of ETL and initializing it
 
 	std::vector<std::vector<std::string>> data = etl.readCSV();
+
+	int rows = data.size();
+
+	int cols = data[0].size();
+
+	Eigen::MatrixXd Mat = etl.CSVtoEigen(data,rows,cols);
+
+
 
 	return EXIT_SUCCESS;
 

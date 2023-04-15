@@ -3,9 +3,9 @@
 #ifndef ETL_h
 #define ETL_h
 
-#include<iostream>;
-#include<vector>;
-
+#include<iostream>
+#include<vector>
+#include<Eigen/Dense>
 
 class ETL {
 
@@ -24,6 +24,8 @@ public:
 	}
 
 	std::vector<std::vector<std::string>> readCSV(); // Reads a CSV file and stores the data into a 2D vector
+
+	Eigen::MatrixXd CSVtoEigen(std::vector<std::vector<std::string>> dataset, int rows, int cols);  // Creates a 2d matrix from a csv dataset
 
 };
 
