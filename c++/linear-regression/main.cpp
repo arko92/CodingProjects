@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
 
 	Eigen::MatrixXd Mat = etl.CSVtoEigen(data,rows,cols);
 
-
+	std::cout << Mat << std::endl;
 
 	return EXIT_SUCCESS;
 

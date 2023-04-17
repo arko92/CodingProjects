@@ -36,23 +36,21 @@ std::vector<std::vector<std::string>> ETL::readCSV()  // Returns a 2D vector
 }
 
 
-Eigen::MatrixXd ETL::CSVtoEigen(std::vector<std::vector<std::string>> dataset, int rows, int cols) {
+Eigen::MatrixXd ETL::CSVtoEigen(std::vector<std::vector<std::string>> Dataset, int rows, int cols) {
 
 	if (Header = true) {
 		rows = rows - 1;
 
 	}
 
-	Eigen::MatrixXd mat(rows, cols);
-
+	Eigen::MatrixXd mat(cols,rows);
 	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < cols; j++) {
+		for (int j = 0; j < cols; ++j) {
 
-			mat(j,i) = atof(dataset[i][j].c_str());  // atof() -- converts strings to float; c_str() -- convert a given string to an array of characters
-
+			mat(j,i) = atof(Dataset[i][j].c_str());  // atof() -- converts strings to float; c_str() -- convert a given string to an array of characters
 		}
-		return mat.transpose();
+		
 
 	}
+	return mat.transpose();
 }
-

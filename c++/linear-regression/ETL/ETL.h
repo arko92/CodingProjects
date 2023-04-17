@@ -5,7 +5,7 @@
 
 #include<iostream>
 #include<vector>
-#include<Eigen/Dense>
+#include<Eigen/Dense> //Eigen is a C++ template library for linear algebra: matrices, vectors, numerical solvers, and related algorithms
 
 class ETL {
 
@@ -25,8 +25,7 @@ public:
 
 	std::vector<std::vector<std::string>> readCSV(); // Reads a CSV file and stores the data into a 2D vector
 
-	Eigen::MatrixXd CSVtoEigen(std::vector<std::vector<std::string>> dataset, int rows, int cols);  // Creates a 2d matrix from a csv dataset
-
+	Eigen::MatrixXd CSVtoEigen(std::vector<std::vector<std::string>> Dataset, int rows, int cols);  // Creates a 2d matrix from a csv dataset
 };
 
 #endif
