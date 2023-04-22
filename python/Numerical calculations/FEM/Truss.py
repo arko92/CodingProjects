@@ -60,5 +60,5 @@ K = truss.compute_stiffness_matrix()
 F = truss.compute_local_force_vector(Fx=1000, Fy=0)
 
 # Compute stress
-T = [0, 0, 100, -2]  # no displacements
+T = [0, 0, 100, -2]  # displacements
 stress = truss.compute_stress(T)
