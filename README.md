@@ -11,10 +11,10 @@ Projects showcasing hands-on programming skills
 
 ### Battery pack
 
-#### Thermal managemenet
+### Thermal managemenet
 
 ### Machine learning
 
 ### Numerical calculations
 
-#### FEM
+### FEM
